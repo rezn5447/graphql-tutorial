@@ -14,7 +14,14 @@ import { typeDefs } from './schema';
 import logo from './logo.svg';
 import './App.css';
 
-const client = new ApolloClient();
+const schema = makeExecutableSchema({ typeDefs});
+addMockFunctionsToSchema({ schema });
+
+const mockNetworkInterface = mockNetworkInterfaceWithSchema({ schema })
+const client = new ApolloClient({
+  networkInterface: mockNetworkInterface,
+});
+
 const channelsListQuery = gql `
    query ChannelsListQuery {
      channels {
