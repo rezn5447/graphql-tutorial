@@ -2,23 +2,23 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const ChannelList = () =>
- (<ul>
-   <li>Channel 1</li>
-   <li>Channel 2</li>
-  </ul>);
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to Apollo</h2>
-        </div>
-        <ChannelList />
-      </div>
-    );
-  }
-}
+const ChannelsList = () =>
+     (<ul className="Item-list">
+       <li>Channel 1</li>
+       <li>Channel 2</li>
+     </ul>);
 
+class App extends Component {
+   render() {
+     return (
+       <div className="App">
+         <div className="App-header">
+           <img src={logo} className="App-logo" alt="logo" />
+           <h2>Welcome to Apollo</h2>
+         </div>
+         <ChannelsList />
+       </div>
+     );
+   }
+ }
 export default App;
