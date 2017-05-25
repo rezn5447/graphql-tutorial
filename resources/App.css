@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: green;
 }
 
 .App-logo {
@@ -22,9 +23,9 @@
 }
 
 .Item-list li {
-  border: 1px dotted gray;
+  border: 1px dotted green;
   width: 20%;
-  height: 3em;  
+  height: 3em;
   margin: auto;
   text-align: left;
 }
